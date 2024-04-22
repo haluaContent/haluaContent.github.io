@@ -1,0 +1,59 @@
+---
+import navData from "../data/navData";
+---
+
+
+<nav>
+
+    <div class="logo-container">
+       <a href="/"><img src="../../public/siteImages/halua content.png" class="logo-img" alt="Halua Content Logo"></a>
+    </div>
+
+    <div class="menu-container montserrat-basic">
+        {
+            navData.map((item)=>(
+                <div class="menu-item-div linkOnDark menu-text">
+                    <a href={item.path}>{item.name}</a>
+                </div>
+            ))
+        }
+
+    </div>
+
+</nav>
+
+
+<style>
+    .logo-container{
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: blue;
+    }
+
+    .logo-img {
+       
+        width: 100vw;
+        height: auto
+        object-fit: cover;
+        display: block;
+    }
+
+   
+
+    .menu-container{
+        background-color: rgb(35, 31, 32);
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+        font-weight: 500;
+    }
+
+    .menu-item-div {
+        padding-left: 2vw;
+        padding-right: 2vw;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+    </style>
