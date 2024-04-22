@@ -1,0 +1,73 @@
+---
+const {
+	title = "Halua Content", 
+	description = "Halua Content Home Page"
+} = Astro.props;
+---
+
+
+<head>
+
+    <!-- Meta -->
+    <meta charset="utf-8" />
+    <meta name="generator" content={Astro.generator} />
+
+    <!-- Icon-->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+
+    <!-- Style Sheet-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- View Port-->
+    <meta name="viewport" content="width=device-width, initial-scale = 1.0" />
+   
+    
+
+    <!-- Fonts -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+
+    <!-- Title -->
+    <title>{title}</title>
+    <meta name="description" content= {description} />
+    <meta name="keywords" content="Penoa, Halua, Halua Content, Samudra Santan">
+    <meta name="author" content="Samudra Santan">
+</head>
+
+<style is:global>
+
+    .montserrat-basic {
+      font-family: "Montserrat", sans-serif;
+      font-optical-sizing: auto;
+      font-style: normal;
+    }
+
+    .column {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .row {
+
+      display: flex;
+      flex-direction: row;
+
+    }
+
+
+    .linkOnDark > a:link, .linkOnDark > a:visited {
+        text-decoration: none;
+        color: azure;
+    }
+
+
+    .linkOnDark:hover > a:link, .linkOnDark:hover > a:visited {
+        color:antiquewhite;
+        text-decoration: underline;
+    }
+    
+    </style>

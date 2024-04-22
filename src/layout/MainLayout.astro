@@ -1,0 +1,70 @@
+---
+import HeadLayout from "./HeadLayout.astro";
+
+const {
+	title ,
+	description
+} = Astro.props;
+
+
+
+
+---
+
+<html lang="en">
+	<HeadLayout {title} {description}/>
+	<body>
+	    <div class="main-container column">
+
+		    <div class="menu-container"></div>
+
+		    <div class="content-container">
+                <main>
+			        <slot></slot>
+		        </main>
+		    </div>
+
+		    <div class="footer-container"></div>
+
+	    </div>
+	</body>
+</html>
+
+
+
+
+
+<style>
+	body, html {
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.main-container {
+	align-content: space-between;
+	height: 100%;
+	width: 100%;
+}
+
+.menu-container {
+	width: 100%;
+	flex: 2;
+	position: -webkit-sticky;
+	position: sticky;
+	top:0;
+	z-index: 100;
+}
+.content-container {
+	flex: 8;
+	width: 100%;
+	
+}
+
+.footer-container {
+	background-color:rgb(35, 31, 32);
+	color: antiquewhite;
+	flex: 2;
+}
+</style>

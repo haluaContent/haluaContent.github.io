@@ -1,0 +1,52 @@
+---
+
+interface Props{
+    sideFlex?: number,
+    mainFlex?: number
+} 
+
+
+const {
+    sideFlex = 1,
+    mainFlex = 4
+} = Astro.props as Props
+---
+
+
+
+
+<div class="body-container row">
+    <div class="side-padding"></div>
+
+    <div class="main-content">
+        <main>
+            <slot></slot>
+        </main>
+        
+    </div>
+
+    <div class="side-padding"></div>
+</div>
+
+
+
+
+<style>
+
+.body-container {
+        width: 100%;
+    }
+
+
+
+    .side-padding {
+        flex: {sideFlex};
+    }
+
+    .main-content {
+        flex: {mainFlex}
+    }
+</style>
+
+
+
