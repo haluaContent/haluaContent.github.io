@@ -8,7 +8,7 @@ const navData =  [
 
     {
         name: "Clients",
-        path: "/clients/"
+        path: "haluacontent.github.io/clients/"
     },
      
     {
