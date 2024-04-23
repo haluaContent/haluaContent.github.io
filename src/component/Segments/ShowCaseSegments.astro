@@ -1,0 +1,52 @@
+---
+import showcaseData from "../../data/ShowCaseData.js"
+import PageHeading from "../PageHeading.astro";
+import CardYoutube from "../Cards/CardYoutube.astro";
+
+
+---
+	<div>
+		<PageHeading text="Show Case"/>
+	
+
+
+	
+		<div class="showcase-div">
+		
+
+			
+		{
+			showcaseData.map((item)=>(
+				<CardYoutube project ={item.name} type="Video" client= {item.client} src={item.url} />
+			))
+		}
+
+	
+
+		</div>
+
+	</div>
+
+
+
+
+		
+<style>
+
+
+
+
+	* {
+		box-sizing: border-box;
+	}
+
+	.showcase-div {
+		display: flex;
+		flex-direction: row;
+		padding: 20px;
+		width: 100%;
+		flex-wrap: wrap;
+		justify-content: space-around;
+
+	}
+</style>
