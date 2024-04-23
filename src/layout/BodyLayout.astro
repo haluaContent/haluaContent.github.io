@@ -1,21 +1,11 @@
 ---
 
-interface Props{
-    sideFlex?: number,
-    mainFlex?: number
-} 
-
-
-const {
-    sideFlex = 1,
-    mainFlex = 4
-} = Astro.props as Props
 ---
 
 
 
 
-<div class="body-container row">
+<div class="body-container">
     <div class="side-padding"></div>
 
     <div class="main-content">
@@ -31,18 +21,42 @@ const {
 <style>
 
 .body-container {
-        width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+
+
     }
 
 
-
-    .side-padding {
-        flex: {sideFlex};
+    @media screen and (min-width: 1200px) {
+  
+        .side-padding {
+        flex: 1;
     }
 
     .main-content {
-        flex: {mainFlex}
+        flex: 4;
     }
+}
+
+
+@media screen and (max-width: 1200px) {
+  
+  .side-padding {
+  flex: 0;
+}
+
+.main-content {
+  flex: 1;
+}
+}
+
+
+
+
+    
 </style>
 
 

@@ -1,1 +1,21 @@
-<h1>Show Case</h1>
+---
+
+import ShowCaseSegments from "../component/Segments/ShowCaseSegments.astro";
+import BodyLayout from "../layout/BodyLayout.astro";
+import MainLayout from "../layout/MainLayout.astro";
+
+
+---
+
+<MainLayout title = "Show Case", description = "A showcase or gallery of our product">
+
+	<BodyLayout>
+		<ShowCaseSegments/>
+	</BodyLayout>
+
+</MainLayout>
+
+
+<style>
+
+</style>
