@@ -1,0 +1,30 @@
+---
+
+
+interface  Props {
+    name: string,
+    imageUrl: string
+}
+
+const {name, imageUrl} = Astro.props as Props
+
+---
+
+
+<div class="client-container">
+
+    <img src={imageUrl} height=auto, width=100%, alt={name} ></a>
+
+</div>
+
+
+<style>
+
+    .client-container {
+        box-sizing: border-box;
+        width: 200px;
+        height: auto;
+        margin: 100px;
+      
+    }
+</style>
