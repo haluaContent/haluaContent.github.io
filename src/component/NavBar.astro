@@ -8,7 +8,7 @@ import { Image } from "astro:assets";
 <nav>
 
     <div class="logo-container">
-       <a href="/"><Image src={logo} class="logo-img" alt="Halua Content Logo"/></a>
+       <a href="/"><img src={logo.src} class="logo-img" alt="Halua Content Logo"/></a>
     </div>
 
     <div class="menu-container montserrat-basic">
@@ -33,7 +33,7 @@ import { Image } from "astro:assets";
         align-items: center;
     }
 
-    .logo-img {
+    .logo-container img {
        
         width: 100vw;
         height: auto
