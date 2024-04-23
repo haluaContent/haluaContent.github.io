@@ -1,12 +1,14 @@
 ---
 import navData from "../data/navData";
+import logo from "../images/siteImages/haluaContent.png"
+import { Image } from "astro:assets";
 ---
 
 
 <nav>
 
     <div class="logo-container">
-       <a href="/"><img src="../../public/siteImages/haluaContent.png" class="logo-img" alt="Halua Content Logo"></a>
+       <a href="/"><Image src={logo} class="logo-img" alt="Halua Content Logo"/></a>
     </div>
 
     <div class="menu-container montserrat-basic">
