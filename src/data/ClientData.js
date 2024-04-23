@@ -2,7 +2,7 @@ const clientData = [
 
     {
         name: "Penoa",
-    imageUrl: "../../public/clientImages/penoa.png",
+    imageUrl: "/clientImages/penoa.png",
 },
 
     {
