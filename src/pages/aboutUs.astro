@@ -1,1 +1,26 @@
-<h1>About Us</h1>
+---
+
+import AboutSegment from "../component/Segments/AboutSegment.astro";
+import ClientsSegment from "../component/Segments/ClientsSegment.astro";
+import BodyLayout from "../layout/BodyLayout.astro";
+import MainLayout from "../layout/MainLayout.astro";
+
+
+---
+
+<MainLayout title = "Show Case", description = "A showcase or gallery of our product">
+
+	<BodyLayout>
+        <div>
+            <AboutSegment/>
+
+        </div>
+		
+	</BodyLayout>
+
+</MainLayout>
+
+
+<style>
+
+</style>

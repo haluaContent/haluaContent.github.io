@@ -7,27 +7,27 @@ const clientData = [
 
     {
         name: "Jaqat Calculator",
-    imageUrl: "../../public/clientImages/jc.png",
+    imageUrl: "/clientImages/jc.png",
 },
 
 {
     name: "Code Log",
-imageUrl: "../../public/clientImages/code_log.png",
+imageUrl: "/clientImages/code_log.png",
 },
 
 {
     name: "Far East Organics",
-imageUrl: "../../public/clientImages/feo.png",
+imageUrl: "/clientImages/feo.png",
 },
 
 {
     name: "Sobai",
-imageUrl: "../../public/clientImages/sobai.png",
+imageUrl: "/clientImages/sobai.png",
 },
 
 {
     name: "Priyotoma",
-imageUrl: "../../public/clientImages/pt.png",
+imageUrl: "/clientImages/pt.png",
 },
 
 ]

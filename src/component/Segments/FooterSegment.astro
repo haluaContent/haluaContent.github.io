@@ -1,0 +1,188 @@
+---
+import navData from "../../data/navData"
+
+
+---
+
+
+<footer>
+    <div class="footer-container montserrat-basic">
+        <div class="footer-header">
+            <div class="contact-container">
+    
+                <h2 class="footer-segment-head">Contact Us</h2>
+                <p class="footer-segment-content column ">
+                    <span >Halua Content</span>
+                    <span >Hotel Al Amin, Ghumgachtola.</span>
+                    <span >Main Road, Cox's Bazar Sadar.</span>
+                    <span >P.O- Cox’s Bazar 4700. Bangladesh</span>
+                </p>
+
+                <p class="column">
+                    <span class="footer-segment-content">Email: haluacontent@gmail.com </span>
+                    <span class="footer-segment-content">Phone: +8801732740074, +8801992655684</span>
+                </p>
+            </div>
+                
+            <div class="social-container">
+                
+                <h2 class="footer-segment-head">Follow Us</h2>
+                  
+                <div class="social-icons">
+                    <a href="https://youtube.com/@Penoa?si=9p8otPFYEjFUV312" class="fa fa-youtube"></a>
+                    <a href="https://www.facebook.com/people/Penoa/61556509794367/" class="fa fa-facebook"></a>
+                    <a href="#" class="fa fa-instagram"></a>
+                    <a href="#" class="fa fa-twitter"></a>
+                    <a href="#" class="fa fa-pinterest"></a>
+                </div>
+                    
+                <p class="footer-segment-content">haluacontent@gmail.com </p>
+                    
+            </div>
+
+
+            <div class="site-container column">
+    
+                <h2 class="footer-segment-head">Site</h2>
+                <p class="footer-segment-content column"  style="align-items:end">
+    
+                    <span class="linkOnDark"><a href = "/">Home</a></span>
+    
+                    {
+                        navData.map((item)=>(
+                        <span class="linkOnDark"><a href={item.path}>{item.name}</a></span>
+                        ))
+                    }
+                    <span class="linkOnDark"><a href = "/team/">The team</a></span>
+                    <span class="linkOnDark"><a href = "/career/">Career</a></span>
+                </p>
+    
+            </div>
+        </div>
+
+        <div class="footer-footer">
+    
+                <small>
+                    Copyright  &copy; Halua Content <span id="copywrite"></span> | all rights reserved.
+                </small>
+        
+                <small>Powered By : Sobai</small>
+        
+    
+        </div>
+    
+    </div>
+</footer>
+
+
+<script>
+
+    document.querySelector("#copywrite").textContent = new Date().getFullYear().toString()
+</script>
+
+<style>
+    .footer-container {
+        padding: 36px;
+    
+    }
+
+    .footer-header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .footer-footer {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        font-weight: 500;
+
+
+    }
+
+    .footer-segment-head{
+        font-weight: 600;
+        font-size: 1.3em;
+    }
+
+    .footer-segment-content{
+        font-weight: 400;
+        font-size: 1em;
+    }
+
+    .contact-container, .social-container{
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 24px;
+        font-size: small;
+    }
+
+    .social-container{
+        align-items: center;
+    }
+
+    .social-icons {
+        display: flex;
+        flex-direction: row;
+        margin-top: 48px;
+      
+    }
+
+    .site-container {
+        align-items: end;
+        font-size: small;
+    }
+
+
+
+    .fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50%;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+
+.fa-youtube {
+  background: #bb0000;
+  color: white;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
+
+.fa-pinterest {
+  background: #cb2027;
+  color: white;
+}
+
+.fa-soundcloud {
+  background: #ff5500;
+  color: white;
+}
+</style>

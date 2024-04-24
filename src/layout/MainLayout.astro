@@ -1,6 +1,7 @@
 ---
 import NavBar from "../component/NavBar.astro";
 import HeadLayout from "./HeadLayout.astro";
+import Footer from "../component/Segments/FooterSegment.astro"
 
 const {
 	title ,
@@ -15,7 +16,7 @@ const {
 <html lang="en">
 	<HeadLayout {title} {description}/>
 	<body>
-	    <div class="main-container column">
+	    <div class="main-container">
 
 		    <div class="menu-container">
 				<NavBar/>
@@ -23,11 +24,13 @@ const {
 
 		    <div class="content-container">
                 <main>
-			        <slot></slot>
+			        <slot>
+						content
+					</slot>
 		        </main>
 		    </div>
 
-		    <div class="footer-container"></div>
+		    <div class="footer-container"><Footer/></div>
 
 	    </div>
 	</body>
@@ -40,15 +43,18 @@ const {
 <style>
 	body, html {
   margin: 0;
-  height: 100%;
   width: 100%;
+  min-height: 100%;
   box-sizing: border-box;
 }
 
 .main-container {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
 	align-content: space-between;
-	height: 100%;
 	width: 100%;
+	height: 100%;
 }
 
 .menu-container {

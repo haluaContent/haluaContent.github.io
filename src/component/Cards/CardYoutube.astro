@@ -29,7 +29,7 @@ const {
     referrerpolicy="strict-origin-when-cross-origin" 
     allowfullscreen>
     </iframe>
-    <div class="youtube-item-text-container">
+    <div class="youtube-item-text-container small-description-text">
         <span >Project: {project}</span>
         <span >Type: {type}</span>
         <span>Client: {client}</span>
@@ -76,6 +76,16 @@ const {
         opacity: 0.95;
     
        
+    }
+
+
+    @media only screen and (max-width: 800px;) {
+        .youtube-item-container:hover   .youtube-item-text-container{
+            opacity: 0;
+        }
+
+
+        
     }
 
 
