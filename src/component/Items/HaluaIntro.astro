@@ -1,0 +1,81 @@
+---
+
+---
+
+
+<div class="container-div">
+    <img src="/pm.gif" width="100%"/>
+    <div class = "text-div">HALUA CONTENT</div>
+    <div class = "overlay-div">
+        <div class="text-container"> 
+            <div class="main-text">HALUA CONTENT</div>
+            
+            <div class="sub-text"> ALWAYS MISTI</div>
+        </div>
+        
+       
+    </div>
+      
+    
+</div>
+
+<style>
+
+    .text-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .main-text{
+        font-family: "Roboto", sans-serif;
+        font-weight: 900;
+        font-size: 3vw;
+     
+    }
+    .sub-text{
+        font-family: "Roboto", sans-serif;
+        font-weight: 100;
+        font-size: 5vw;
+     
+    }
+
+    .container-div {
+        position: relative;
+    }
+
+    .text-div{
+        font-family: "Roboto", sans-serif;
+        font-weight: 900;
+        font-size: 10vw;
+        color: rgb(35, 31, 32);
+        position: absolute;
+        top: 0; right: 0; left: 0; bottom: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    .overlay-div {
+        position: absolute;
+       
+        background: radial-gradient(black 15%, transparent 16%) 0 0,
+radial-gradient(black 15%, transparent 16%) 8px 8px,
+radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 0 1px,
+radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 8px 9px;
+background-color:#282828;
+background-size:16px 16px;
+
+
+        z-index: 10;
+        top: 0; bottom: 0; left: 0; right: 0;
+        opacity: .9;
+        color: aliceblue;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+ 
+    }
+</style>
