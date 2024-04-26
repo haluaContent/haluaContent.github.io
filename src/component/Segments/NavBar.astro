@@ -1,13 +1,18 @@
 ---
 import navData from "../../data/navData";
-import logo from "../../images/siteImages/haluaContent.png"
+
 ---
 
 
 <nav>
 
     <div class="logo-container">
-       <a href="/"><img src={logo.src} class="logo-img" alt="Halua Content Logo"/></a>
+       <a href="/">
+        <picture>
+            <source media="(min-width:650px)", srcset="/siteImages/haluaContent.png">
+            <img src="/siteImages/hc-mobile.png" alt="Halua Content Logo"/>
+        </picture>
+    </a>
     </div>
 
     <div class="menu-container">
@@ -55,5 +60,14 @@ import logo from "../../images/siteImages/haluaContent.png"
         padding-right: 2vw;
         padding-top: 5px;
         padding-bottom: 5px;
+    }
+
+
+    @media only screen and (max-width: 600px) {
+
+        .menu-container {
+            display: none;
+        }
+        
     }
     </style>

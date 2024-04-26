@@ -26,12 +26,16 @@ const {
 		    <div class="content-container">
                 <main>
 			        <slot>
-						content
+					
 					</slot>
 		        </main>
 		    </div>
 
-		    <div class="footer-container"><Footer/></div>
+		    <div class="footer-container">
+
+				<Footer/>
+				
+			</div>
 
 	    </div>
 	</body>
@@ -69,12 +73,23 @@ const {
 .content-container {
 	flex: 8;
 	width: 100%;
-	
 }
 
-.footer-container {
+div.footer-container {
+
 	background-color:rgb(35, 31, 32);
 	color: antiquewhite;
 	flex: 2;
+	
+}
+
+
+@media only screen and (max-width: 600px) {
+
+	div.footer-container {
+display: none;
+
+}
+	
 }
 </style>
