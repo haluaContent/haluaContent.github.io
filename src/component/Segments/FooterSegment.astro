@@ -6,7 +6,7 @@ import navData from "../../data/navData"
 
 
 <footer>
-    <div class="footer-main-container">
+    <div class="footer-main-container bgWhite">
         <div class="footer-header">
             <div class="contact-container">
     
@@ -46,15 +46,15 @@ import navData from "../../data/navData"
                 <h2 class="footer-segment-head">Site</h2>
                 <p class="footer-segment-content column"  style="align-items:end">
     
-                    <span class="linkOnDark"><a href = "/">Home</a></span>
+                    <span class="linkOnWhite"><a href = "/">Home</a></span>
     
                     {
                         navData.map((item)=>(
-                        <span class="linkOnDark"><a href={item.path}>{item.name}</a></span>
+                        <span class="linkOnWhite"><a href={item.path}>{item.name}</a></span>
                         ))
                     }
-                    <span class="linkOnDark"><a href = "/team/">The team</a></span>
-                    <span class="linkOnDark"><a href = "/career/">Career</a></span>
+                    <span class="linkOnWhite"><a href = "/team/">The team</a></span>
+                    <span class="linkOnWhite"><a href = "/career/">Career</a></span>
                 </p>
     
             </div>
@@ -80,112 +80,14 @@ import navData from "../../data/navData"
     document.querySelector("#copywrite").textContent = new Date().getFullYear().toString()
 </script>
 
-<style>
-    .footer-main-container {
-        display: block;
-        width: 100%;
-        padding: 1vw;
-        font-family: "Roboto", sans-serif;
-    
-    }
 
-    .footer-header {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-    }
+   
 
-    .footer-footer {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        font-weight: 100;
+   
+
+   
 
 
-    }
-
-    .footer-segment-head{
-        font-weight: 100;
-        font-size: 1.3em;
-    }
-
-    .footer-segment-content{
-        font-weight: 300;
-        font-size: 1em;
-    }
-
-    .contact-container, .social-container{
-        display: flex;
-        flex-direction: column;
-        padding-bottom: 24px;
-        font-size: small;
-    }
-
-    .social-container{
-        align-items: center;
-    }
-
-    .social-icons {
-        display: flex;
-        flex-direction: row;
-        margin-top: 48px;
-      
-    }
-
-    .site-container {
-        align-items: end;
-        font-size: small;
-    }
+   
 
 
-
-    .fa {
-  padding: 20px;
-  font-size: 30px;
-  width: 30px;
-  text-align: center;
-  text-decoration: none;
-  margin: 5px 2px;
-  border-radius: 50%;
-}
-
-.fa:hover {
-    opacity: 0.7;
-}
-
-
-.fa-youtube {
-  background: #bb0000;
-  color: white;
-}
-
-.fa-facebook {
-  background: #3B5998;
-  color: white;
-}
-
-.fa-twitter {
-  background: #55ACEE;
-  color: white;
-}
-
-.fa-linkedin {
-  background: #007bb5;
-  color: white;
-}
-
-.fa-instagram {
-  background: #125688;
-  color: white;
-}
-
-.fa-pinterest {
-  background: #cb2027;
-  color: white;
-}
-
-.fa-soundcloud {
-  background: #ff5500;
-  color: white;
-}
-</style>

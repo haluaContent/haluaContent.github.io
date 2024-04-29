@@ -1,73 +1,76 @@
 ---
 import navData from "../../data/navData";
+console.log("One Time")
 
 ---
 
 
-<nav>
 
-    <div class="logo-container">
-       <a href="/">
-        <picture>
-            <source media="(min-width:650px)", srcset="/siteImages/haluaContent.png">
-            <img src="/siteImages/hc-mobile.png" alt="Halua Content Logo"/>
-        </picture>
-    </a>
-    </div>
+<div class="fullWidth">
+    <nav>
 
-    <div class="menu-container">
-        {
-            navData.map((item)=>(
-                <div class="menu-item-div linkOnDark menu-text">
-                    <a href={item.path}>{item.name}</a>
+        <div class="nav-head fullWidth bgWhite">
+            <div class ="logo-container"> 
+                <a href="/">
+                    <img src="/siteImages/haluaContentLogoDark.png" alt="Halua Content Logo"/>
+                </a>
+            </div>
+
+            <div id="menu-container" class="menu-container bgWhite">
+
+                <div id="menu-close-button" class="menu-close-button menu-item linkOnWhite f2 w500">
+                    &times;
                 </div>
-            ))
-        }
-
-    </div>
-
-</nav>
-
-
-<style>
-    .logo-container{
-        overflow: hidden;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .logo-container img {
-       
-        width: 100vw;
-        height: auto
-        object-fit: cover;
-        display: block;
-    }
-
-   
-
-    .menu-container{
-        background-color: rgb(35, 31, 32);
-        padding: 20px;
-        display: flex;
-        justify-content: center;
-        font-weight: 500;
-    }
-
-    .menu-item-div {
-        padding-left: 2vw;
-        padding-right: 2vw;
-        padding-top: 5px;
-        padding-bottom: 5px;
-    }
-
-
-    @media only screen and (max-width: 600px) {
-
-        .menu-container {
-            display: none;
-        }
+    
         
-    }
-    </style>
+                {
+                    navData.map((item)=>(
+                        <div  class="menu-item linkOnWhite">
+                            <a href={item.path}>{item.name}</a>
+                        </div>
+                    ))
+                }
+    
+            </div>
+       
+            <div id="menu-icon-container" class="menu-icon-container">
+                &#9776
+            </div>
+        </div>
+    </nav>
+</div>
+
+<script>
+
+
+    document.getElementById("menu-icon-container").addEventListener('click', ()=> {
+        const element = document.getElementById("menu-container");
+        element.style.width = "100%";
+        element.style.height = "100%";
+        element.style.opacity = "1"
+    })
+
+ 
+ 
+    document.getElementById('menu-close-button').addEventListener('click', ()=> {
+
+        const element = document.getElementById("menu-container");
+        element.style.width = "0";
+        element.style.height = "0";
+        element.style.opacity = "0"
+
+
+        const itemList = document.getElementsByClassName("div.menu-item-div").namedItem;
+
+        for (let i = 0; i<itemList.length; i++){
+
+            itemList[i].style.background = "Red"
+
+        }
+
+
+
+    });
+    
+ 
+</script>

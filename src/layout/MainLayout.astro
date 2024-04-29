@@ -3,6 +3,7 @@
 import HeadLayout from "./HeadLayout.astro";
 import Footer from "../component/Segments/FooterSegment.astro"
 import NavBar from "../component/Segments/NavBar.astro";
+import MobileFooterSegment from "../component/Segments/MobileFooterSegment.astro";
 
 const {
 	title ,
@@ -19,7 +20,7 @@ const {
 	<body>
 	    <div class="main-container">
 
-		    <div class="menu-container">
+		    <div class="nav-container">
 				<NavBar/>
 			</div>
 
@@ -32,9 +33,13 @@ const {
 		    </div>
 
 		    <div class="footer-container">
+				<div class="pc-footer">
+					<Footer/>
+				</div>
 
-				<Footer/>
-				
+				<div class="mobile-footer">
+					<MobileFooterSegment/>
+				</div>
 			</div>
 
 	    </div>
@@ -62,7 +67,7 @@ const {
 	height: 100%;
 }
 
-.menu-container {
+.nav-container {
 	width: 100%;
 	flex: 2;
 	position: -webkit-sticky;
@@ -77,18 +82,29 @@ const {
 
 div.footer-container {
 
-	background-color:rgb(35, 31, 32);
-	color: antiquewhite;
-	flex: 2;
+	
 	
 }
 
+.pc-footer {
 
-@media only screen and (max-width: 600px) {
+	display: block;
 
-	div.footer-container {
-display: none;
+}
 
+.mobile-footer {
+	display: none;
+}
+
+
+@media only screen and (max-width: 680px) {
+
+	.mobile-footer {
+	display: block;
+}
+
+.pc-footer {
+	display: none;
 }
 	
 }
