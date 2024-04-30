@@ -20,76 +20,37 @@ const {
 
 
 <div class="youtube-item-container">
-    <iframe 
-    width=auto height=auto
-    src={src}
-    title={project}
-    frameborder="0" 
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-    referrerpolicy="strict-origin-when-cross-origin" 
-    allowfullscreen>
-    </iframe>
-    <div class="youtube-item-text-container small-description-text">
-        <span >Project: {project}</span>
-        <span >Type: {type}</span>
-        <span>Client: {client}</span>
+    <div class="youtube-item-video-container">
+
+        <iframe 
+        class="youtube-item-iframe"
+        width=auto height=auto
+        src={src}
+        title={project}
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        referrerpolicy="strict-origin-when-cross-origin" 
+        allowfullscreen>
+        </iframe>
+
+    </div>
+   
+    <div class="youtube-item-text-container">
+        <span class="video-name" >{project}</span>
+        <span class ="video-client">{client}</span>
+        <div class="video-footer">
+            <span >Type: {type}</span>
+            <span >2024</span>
+        </div>
+       
+       
     </div>
 </div>
 
 
 
 
-<style>
 
-    .youtube-item-container {
-        display: flex;
-        flex-direction: column;
-        background-color: rgb(35, 31, 32);
-        padding: 12PX;
-        margin: 12px;
-        z-index: 1;
-        position: relative;
-        display: block;
-    }
 
-    .youtube-item-text-container {
-        position: absolute;
-        display: flex;
-        flex-direction: column;
-        background-color: rgb(35, 31, 32);
-        padding: 12px;
-        padding-left: 24px;
-        z-index: 2;
-        color: aliceblue;
-        top: 0; right: 0; left: 0;
-        opacity: 0;
-        font-size: small;
-        height: auto;
-        width: auto;
+   
     
-        
-    }
-
-    
-    .youtube-item-container:hover   .youtube-item-text-container{
-
-        opacity: 0.95;
-    
-       
-    }
-
-
-    @media only screen and (max-width: 800px;) {
-        .youtube-item-container:hover   .youtube-item-text-container{
-            opacity: 0;
-        }
-
-
-        
-    }
-
-
-
-
-
-</style>
