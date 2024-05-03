@@ -1,0 +1,43 @@
+
+---
+import PageHeading from "../Items/PageHeading.astro";
+import teamData from "../../data/TeamData"
+import CardTeam2 from "../Cards/CardTeam2.astro";
+
+
+---
+
+
+<div class="team-container2">
+    <PageHeading text="HERE WE ARE"/>
+    <div class="team-card-container2">
+        {
+        teamData.map((item)=>(	
+            <a href="/yeasir/">
+            <CardTeam2 
+            name={item.name} 
+            imageUrl={item.imageUrl} 
+            isLeft={item.isLeft} 
+            role={item.role}
+            description={item.description}
+            addText={item.addText}
+            email={item.email}
+            />
+
+        </a>
+        ))
+        }
+    </div>
+</div>
+
+
+
+<style>
+	.team-card-container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	
+</style>

@@ -1,0 +1,25 @@
+---
+
+import CardTeam from "../component/Cards/CardTeam.astro";
+import teamData from "../data/TeamData"
+import BodyLayout from "../layout/BodyLayout.astro";
+import MainLayout from "../layout/MainLayout.astro";
+
+
+---
+
+<MainLayout title = "Show Case", description = "A showcase or gallery of our product">
+
+	<BodyLayout>
+        <CardTeam 
+        name=  {teamData[0].name}
+        imageUrl={teamData[0].imageUrl} 
+        isLeft={teamData[0].isLeft} 
+        role={teamData[0].role}
+        description={teamData[0].description}
+        addText={teamData[0].addText}
+        email={teamData[0].email}
+        />
+	</BodyLayout>
+
+</MainLayout>
