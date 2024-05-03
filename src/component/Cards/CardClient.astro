@@ -11,20 +11,10 @@ const {name, imageUrl} = Astro.props as Props
 ---
 
 
-<div class="client-container">
+<div class="client-item-container">
 
-    <img src={imageUrl} height=auto, width=100%, alt={name} ></a>
+    <img src={imageUrl} height=auto, width=100%, alt={name} />
 
 </div>
 
 
-<style>
-
-    .client-container {
-        box-sizing: border-box;
-        width: 100px;
-        height: auto;
-        margin: 100px;
-      
-    }
-</style>

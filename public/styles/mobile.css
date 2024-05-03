@@ -10,11 +10,7 @@
     box-sizing: border-box;
 }
 
-.nav-head img {
-   
-    width: 25vw;
-    height: auto;
-}
+
 
 .menu-icon-container {
     display: block;
@@ -40,6 +36,8 @@
     display: block;
     font-size: 5vw;
 }
+
+
 
 
 /* Footer */
@@ -155,6 +153,7 @@
     height: 50%;
     padding: 24px 1px;
     justify-content: end;
+    animation: none;
   }
 
   .intro-text{
@@ -162,6 +161,7 @@
     width: 100%;
     height: 60%;
     justify-content: start;
+    animation: none;
 
  }
 
@@ -216,6 +216,49 @@
   font-size: 2vw;
 }
 
+/* Team */
+
+
+.team-card-item-cotainer2{
+  
+  height: 75vh;
+  width: 45vh;
+  background-color: rgb(241, 241, 241);
+
+
+
+}
+
+.teamCard-image-container2{
+  position: relative;
+  padding: 1vh;
+  border-radius: 15;
+  margin: 0;
+
+
+}
+
+.team-card-text-container{
+  position: relative;
+  opacity: 1;
+  align-content: center;
+
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+
+  box-sizing: border-box;
+  justify-content: center;
+  align-items: center;
+  color: var(--bgDark);
+
+}
+
+.team-card-text-background2{
+
+  display: none;
+
+}
 
 
 

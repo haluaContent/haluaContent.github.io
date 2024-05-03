@@ -7,7 +7,7 @@ import CardClient from "../Cards/CardClient.astro"
 ---
 	<div>
 		<PageHeading text="CLIENTS"/>
-			<div class="clients-div">
+			<div class="clients-content-container">
 		
 			{
 				clientData.map((item)=>(
@@ -28,22 +28,3 @@ import CardClient from "../Cards/CardClient.astro"
 
 
 		
-<style>
-
-
-
-
-	* {
-		box-sizing: border-box;
-	}
-
-	.clients-div {
-		display: flex;
-		flex-direction: row;
-		padding: 20px;
-		width: 100%;
-		flex-wrap: wrap;
-		justify-content: space-around;
-
-	}
-</style>

@@ -12,7 +12,7 @@ console.log("One Time")
         <div class="nav-head fullWidth bgWhite">
             <div class ="logo-container"> 
                 <a href="/">
-                    <img src="/siteImages/haluaContentLogoDark.png" alt="Halua Content Logo"/>
+                    <img src="/siteImages/halua-logo.png" alt="Halua Content Logo"/>
                 </a>
             </div>
 
@@ -44,6 +44,7 @@ console.log("One Time")
 
 
     document.getElementById("menu-icon-container").addEventListener('click', ()=> {
+        console.log("working")
         const element = document.getElementById("menu-container");
         element.style.width = "100%";
         element.style.height = "100%";
@@ -58,18 +59,6 @@ console.log("One Time")
         element.style.width = "0";
         element.style.height = "0";
         element.style.opacity = "0"
-
-
-        const itemList = document.getElementsByClassName("div.menu-item-div").namedItem;
-
-        for (let i = 0; i<itemList.length; i++){
-
-            itemList[i].style.background = "Red"
-
-        }
-
-
-
     });
     
  
