@@ -1,0 +1,28 @@
+---
+import type Category from "../../pages/category/[category].astro"
+
+const {post} = Astro.props
+const {url, frontmatter, rawContent} = post
+---
+
+
+<a href={url} class="td-n c-dark">
+    <div class="container-cardMain">
+      
+        <div class="img-cardMain">
+             <img src={frontmatter.images.src}/>
+        </div>
+        <div class="text-cardMain">
+            <div class="category-cardMain">{frontmatter.category}</div>
+
+            <h1 class="title-cardMain">{frontmatter.title}</h1>
+           
+            <div class="article-cardMain">{rawContent} </div>
+            <div class="readMore-cardMain">Read More...</div>
+           
+            
+        </div>
+       
+    </div>
+
+</a>

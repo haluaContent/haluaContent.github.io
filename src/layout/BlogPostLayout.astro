@@ -1,0 +1,45 @@
+---
+import BodyLayout from "./BodyLayout.astro";
+import slugify from "../js/slugify";
+import formatDate from "../js/formatDate"
+import ABNMainLayout from "./MainLayout_Blog.astro";
+
+const {frontmatter} = Astro.props
+
+const {title, images, category, author, articleDate} = frontmatter
+
+---
+
+<ABNMainLayout>
+    <BodyLayout>
+        <div class="blogContainer">
+            <div class="blog-meta">
+                <div class="category-containter">
+                    <a href={`/category/${slugify(category)}`} class="td-n c-dark">
+                        <small>{category}</small>
+                        
+                    </a>
+                </div>
+
+                <div class="centerAll">
+                    <small>
+                    <span> by &nbsp; </span>
+                    <a href=`/author/${slugify(author)}` class="td-n c-dark">{author}</a>
+                    &nbsp;.&nbsp;{formatDate(articleDate)}
+                </small>
+                </div>
+            </div>
+           
+            <h1 class="centerAll blog-title" >{title}</h1>
+
+            
+            
+            <div class="blogImage"><img src={images.src} alt= {images.alt}/></div>
+           
+            <slot/>
+        </div>
+
+    </BodyLayout>
+    
+
+</ABNMainLayout>

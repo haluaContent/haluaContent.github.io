@@ -4,26 +4,25 @@ import navData from "../../data/navData";
 
 
 
-<div class="fullWidth">
-    <nav>
 
-        <div class="nav-head fullWidth bgWhite">
-            <div class ="logo-container"> 
+<nav>
+    <div class="baseNavbar bgWhite">
+            <div class ="logoNavbar"> 
                 <a href="/">
                     <img src="/siteImages/halua-logo.png" alt="Halua Content Logo"/>
                 </a>
             </div>
 
-            <div id="menu-container" class="menu-container bgWhite">
+            <div id="menuNavbar" class="menuNavbar bgWhite">
 
-                <div id="menu-close-button" class="menu-close-button menu-item linkOnWhite f2 w500">
+                <div id="closeButtonMenu" class="closeButtonMenu link-l btn-txt anim-tsl-2">
                     &times;
                 </div>
     
         
                 {
                     navData.map((item)=>(
-                        <div  class="menu-item linkOnWhite">
+                        <div  class="link-l btn-text anim-tsl-2">
                             <a href={item.path}>{item.name}</a>
                         </div>
                     ))
@@ -31,19 +30,17 @@ import navData from "../../data/navData";
     
             </div>
        
-            <div id="menu-icon-container" class="menu-icon-container">
+            <div id="drawerIconNavbar" class="drawerIconNavbar">
                 &#9776
             </div>
-        </div>
-    </nav>
-</div>
+    </div>
+</nav>
 
 <script>
 
 
-    document.getElementById("menu-icon-container").addEventListener('click', ()=> {
-        console.log("working")
-        const element = document.getElementById("menu-container");
+    document.getElementById("drawerIconNavbar").addEventListener('click', ()=> {
+        const element = document.getElementById("menuNavbar");
         element.style.width = "100%";
         element.style.height = "100%";
         element.style.opacity = "1"
@@ -51,9 +48,9 @@ import navData from "../../data/navData";
 
  
  
-    document.getElementById('menu-close-button').addEventListener('click', ()=> {
+    document.getElementById('closeButtonMenu').addEventListener('click', ()=> {
 
-        const element = document.getElementById("menu-container");
+        const element = document.getElementById("menuNavbar");
         element.style.width = "0";
         element.style.height = "0";
         element.style.opacity = "0"

@@ -3,6 +3,8 @@
 :root {
     --mobile: 680px;
     --bgDark: rgb(35,31, 32); 
+    --bgRed: rgb(235,34,21)
+    
 }
 
 
@@ -13,6 +15,14 @@
 body, html {
     box-sizing: border-box;
     font-family: "Roboto", sans-serif;
+    margin: 0;
+
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+body::-webkit-scrollbar {
+    display: none;
 }
 
 
@@ -24,6 +34,12 @@ body, html {
 
 .colorDark {
     color: rgb(35,31,32);
+}
+
+.c-dark {
+
+    color: rgb(35,31,32);
+
 }
 
 .bgWhite {
@@ -42,11 +58,69 @@ body, html {
     background-color:antiquewhite;
 }
 
+
 .colorNews {
     color:antiquewhite;
 }
 
+.c-golden {
+    color:rgb(250, 221, 182);
+}
 
+
+/* FONT SIZE */
+
+.fvw-10 {
+    font-size: 10vw;
+}
+
+
+/* Align */
+
+.ta-c {
+    text-align: center;
+}
+
+.centerAll {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.jc-c {
+    display: flex;
+    justify-content: center;
+}
+
+
+/* Border */
+
+
+.bdr-tl {
+    border-top: 1px solid var(--bgDark);
+    border-left: 1px solid var(--bgDark);
+
+}
+
+.bdr-br {
+    border-bottom: 1px solid var(--bgDark);
+    border-right: 1px solid var(--bgDark);
+}
+
+
+
+/* padding */
+
+
+
+/* Margin */
+
+
+.margin-tb-2vw {
+
+    margin:2vw 0;
+
+}
 
 
 
@@ -67,35 +141,64 @@ body, html {
 
 
 
-/* LINK */
 
-.linkOnWhite > a:link, .linkOnWhite > a:visited {
-    text-decoration: none;
-    color: rgb(35, 31, 32);
-    cursor: pointer;
+
+.col {
+    display: flex;
+    flex-direction: column;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.row-rev {
+    flex-direction: row-reverse;
 }
 
 
 
 
-.linkOnWhite:hover > a:link, .linkOnWhite:hover > a:visited, .linkOnWhite:hover {
-    color:rgb(226, 22, 100);
-    font-weight: 600;
-    cursor: pointer;
+/* LAYOUTS */
+
+.BaseMainLayout {
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    width: 100%;
+    height: 100%;
+}
+
+
+.headMainLayout {
+    display: block;
+}
+
+.contentMainLayout {
+    display: block;
+}
+
+.footerMainlayout{
+    display: block;
+}
+
+.wideFooter{
+    display: block;
+}
+
+.narrowFooter{
+    display: none;
 }
 
 
 
 /* Navigation */
 
-
-
-.nav-head {
+.baseNavbar {
     box-sizing: border-box;
-    padding-left: 24px;
-    padding-right: 60px;
-    padding-top: 24px;
-    padding-bottom: 24px;
+    padding: 2vw;
+    width: 100%;
     height: 10vh;
 
     display: flex;
@@ -103,58 +206,63 @@ body, html {
     align-items: center;
 }
 
-.nav-head img {
-   
+.logoNavbar img {
    height: 8vh;
    width: auto;
 }
 
-.menu-icon-container {
-    display: none;
-}
-
-
-
-.menu-container{
-    font-weight: 500;
+.menuNavbar {
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 4vw;
 }
 
-.menu-item {
-    position: relative;
-    padding: 0px 24px;
+.drawerIconNavbar {
+    display: none;
+    cursor: pointer;
 }
 
-.menu-item:hover {
 
-
-    transform: translate(5px);
-    transition: transform .4s;
-    transition-timing-function: ease-out;
-  }
-
-.menu-close-button {
+.closeButtonMenu {
     display: none;
 }
+
+
+
+.brandNavbar_Blog {
+    font-size: 10vw;
+    text-align: center;
+    color: var(--bgDark);
+    font-weight: 100;
+}
+
+
+
+.seperatorMenu:last-child {
+    display: none;
+}
+
+
+
+
 
 
 /* Footer */
 
-.footer-main-container {
+.baseFooter {
     box-sizing: border-box;
     display: block;
-    padding: 1vw;
+    padding: 2vw;
 }
 
-.footer-header {
+.headFooter {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
 }
 
-.footer-footer {
+.footerFooter {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -166,76 +274,32 @@ body, html {
 
 
 
-.contact-container, .social-container{
+.contactFooter, .socialFooter{
     display: flex;
     flex-direction: column;
     padding-bottom: 24px;
     font-size: small;
 }
 
-.social-container{
+.socialFooter{
     align-items: center;
 }
 
-.social-icons {
+.siteFooter {
+    align-items: end;
+    font-size: small;
+}
+
+.socialIconsFooter {
     display: flex;
     flex-direction: row;
     margin-top: 24px;
   
 }
 
-.site-container {
-    align-items: end;
-    font-size: small;
-}
 
-.fa {
-    padding: 1vw;
-    font-size: 1vw;
-    width: 1vw;
-    text-align: center;
-    text-decoration: none;
-    margin: 5px 2px;
-    border-radius: 25%;
-    border: 1px solid rgb(35, 31, 32);
-    color: rgb(35, 31, 32);
-  }
-  
-  
-  .fa-youtube:hover {
-    background: #bb0000;
-    color: white;
-  }
-  
-  .fa-facebook:hover {
-    background: #3B5998;
-    color: white;
-  }
-  
-  .fa-twitter:hover {
-    background: #55ACEE;
-    color: white;
-  }
-  
-  .fa-linkedin:hover {
-    background: #007bb5;
-    color: white;
-  }
-  
-  .fa-instagram:hover {
-    background: #125688;
-    color: white;
-  }
-  
-  .fa-pinterest:hover {
-    background: #cb2027;
-    color: white;
-  }
-  
-  .fa-soundcloud {
-    background: #ff5500;
-    color: white;
-  }
+
+
 
 
   /* Intro */
@@ -307,6 +371,7 @@ body, html {
 .main-text{
     font-weight: 900;
     font-size: 5vw;
+    text-align: center;
  
 }
 
@@ -539,6 +604,87 @@ body, html {
         opacity: 1;
     }
 
+
+    /* 404 */
+
+    .opps {
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100dvh;
+        width: 100%;
+        padding: auto;
+        margin: auto;
+        font-size: 5vw;
+        text-align: center;
+      
+    }
+
+    
+    /* Blog */
+
+
+
+
+    .postCardListContainer {
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        
+    }
+
+    .postCardContainer {
+        box-sizing: border-box;
+        margin: 20px;
+        width: 100%;
+        height: 45vh;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    }
+
+
+    .postCardImage {
+
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+
+    }
+
+    .postCardImage img {
+
+       width: 100%;
+       height: 100%;
+       object-fit: cover;
+       
+
+    }
+
+    .postCardText {
+        background-color: var(--bgDark);
+        max-width: 50%;
+        position: absolute;
+        left: 10px;
+        top: 10px;
+        bottom: 10px;
+        z-index: 10;
+        box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+        padding: 24px;
+        background-color: var(--bgDark);
+        color: aliceblue;
+        opacity: .95;
+    }
+
+    .postCardHeader {
+        font-size: 2vmax;
+    }
+
+    .postCardBody {
+        font-size: .8vmax;
+    }
   
 
 

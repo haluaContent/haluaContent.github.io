@@ -1,0 +1,64 @@
+---
+import PageHeading from '../../component/Items/PageHeading.astro';
+import slugify from '../../js/slugify';
+import ABNMainLayout from '../../layout/MainLayout_Blog.astro';
+import BodyLayout from '../../layout/BodyLayout.astro';
+import sortPost from '../../js/sortPost';
+import CardPost from '../../component/Cards/CardPost.astro';
+import CardPostMain from '../../component/Cards/CardPostMain.astro';
+import CardPostSquare from '../../component/Cards/CardPostSquare.astro';
+import BlogListComponent from '../../component/Segments/BlogListComponent.astro';
+
+
+
+
+export async function getStaticPaths() {
+  const allPost = await Astro.glob("../blog/*.md");
+  const sortedPost = sortPost(
+    allPost, 
+    {noFuturePost: false, publishedOnly: false, limit:undefined}
+  )
+
+  const allAuthors = [...new  Set(
+
+    sortedPost.map(post => post.frontmatter.author).flat()
+
+  )]
+
+
+
+  return allAuthors.map((author:string) => {
+
+    const filteredPost = sortedPost.filter(post => post.frontmatter.author === author);
+    return {
+      params: {author: slugify(author)},
+      props: {
+        authorName: author,
+        post: filteredPost
+      }
+    }
+
+  })
+}
+
+const { author} = Astro.params
+const{ authorName, post} = Astro.props
+
+
+
+
+
+const filteredPost = post.filter (postItem => 
+  slugify(postItem.frontmatter.author) === author
+)
+
+---
+
+<ABNMainLayout>
+  <div style="padding-top: 2vw;"/>   
+    <PageHeading text={authorName.toLocaleUpperCase()} />
+    <BlogListComponent sortedPost = {post}/>
+
+</ABNMainLayout>
+
+

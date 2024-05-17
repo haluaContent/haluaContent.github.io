@@ -1,0 +1,67 @@
+---
+import navData from "../../data/ABN_navData";
+---
+
+
+
+<nav>
+    <div class="baseNavbar_Blog">
+        <div class="brandNavbar_Blog">
+            <a href="/blog/" class="td-n c-dark">ABOHOMAN</a>
+            
+        </div>
+
+
+        
+
+        <div id="menuNavbar" class="menuNavbar bgNews">
+
+            <div id="closeButtonMenu" class="closeButtonMenu link-n">
+                &times;
+            </div>
+
+            {
+                navData.map((item)=>(
+                    <div  class="link-n">
+                        <a href={item.path} class="">{item.name}</a>
+                    </div>
+
+                    <div class="seperatorMenu">
+                        <small>x</small>
+                    </div>
+                ))
+            }
+
+        </div>
+
+        <div id="drawerIconNavbar" class="drawerIconNavbar">
+            &#9776
+        </div>
+    </div>
+    
+</nav>
+
+
+<script>
+
+
+    document.getElementById("drawerIconNavbar").addEventListener('click', ()=> {
+        console.log("log somethings")
+        const element = document.getElementById("menuNavbar");
+        element.style.width = "100%";
+        element.style.height = "100%";
+        element.style.opacity = "1"
+    })
+
+ 
+ 
+    document.getElementById('closeButtonMenu').addEventListener('click', ()=> {
+
+        const element = document.getElementById("menuNavbar");
+        element.style.width = "0";
+        element.style.height = "0";
+        element.style.opacity = "0"
+    });
+    
+ 
+</script>

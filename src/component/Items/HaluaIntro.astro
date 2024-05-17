@@ -1,18 +1,38 @@
 ---
 
+interface Props {
+
+    mainText?: string,
+    subText?: string,
+    desText?: string,
+    endText?: string,
+    imgUrl?: string,
+    reversed?: boolean,
+
+}
+
+
+const {
+    mainText= "", 
+    subText= "", 
+    desText = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis quibusdam mollitia animi quam quos asperiores dolor praesentium iste molestiae! Non quod, tempora sapiente porro molestiae commodi voluptate sint aperiam recusandae.",
+    endText = "",
+    imgUrl = "",
+    reversed = false
+    } = Astro.props as Props
 ---
 
 
-<div class="intro-container">
+<div class:list={["intro-container", {"row-rev": reversed}]}>
 
     <div class = "intro-text">
-        <div class="sub-text"> Penoa Presents</div>
-        <div class="main-text">PRIYO MUKH</div>
-        <p class="des-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis quibusdam mollitia animi quam quos asperiores dolor praesentium iste molestiae! Non quod, tempora sapiente porro molestiae commodi voluptate sint aperiam recusandae.</p>
-        <div class="end-text">COMING SOON</div>
+        <div class="sub-text">{subText}</div>
+        <div class="main-text">{mainText}</div>
+        <p class="des-text"> {desText}</p>
+        <div class="end-text">{endText}</div>
     </div>
     <div class = "intro-image">
-        <img src="/pm.gif" width="100%"/>
+        <img src={imgUrl} width="100%"/>
     </div>
       
 </div>

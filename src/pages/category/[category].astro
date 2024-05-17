@@ -1,0 +1,50 @@
+---
+import PageHeading from '../../component/Items/PageHeading.astro';
+import slugify from '../../js/slugify';
+import ABNMainLayout from '../../layout/MainLayout_Blog.astro';
+import sortPost from '../../js/sortPost';
+import BlogListComponent from '../../component/Segments/BlogListComponent.astro';
+
+
+
+
+export async function getStaticPaths() {
+  const allPost = await Astro.glob("../blog/*.md");
+  const sortedPost = sortPost(
+    allPost, 
+    {noFuturePost: false, publishedOnly: false, limit:undefined}
+  )
+
+  const allCategory = [...new  Set(
+
+    sortedPost.map(post => post.frontmatter.category).flat()
+
+  )]
+
+
+
+  return allCategory.map((category:string) => {
+
+    const filteredPost = sortedPost.filter(post => post.frontmatter.category === category);
+    return {
+      params: {category: slugify(category)},
+      props: {
+        categoryName: category,
+        posts: filteredPost
+      }
+    }
+
+  })
+}
+
+const { category} = Astro.params
+const{ categoryName, posts} = Astro.props
+---
+
+<ABNMainLayout>
+  <div style="padding-top: 2vw;"/>
+  <PageHeading text={categoryName.toLocaleUpperCase()} />
+  <BlogListComponent sortedPost = {posts} />
+</ABNMainLayout>
+
+

@@ -1,0 +1,78 @@
+---
+import ABNMainLayout from "../../layout/MainLayout_Blog.astro";
+import sortPost from '../../js/sortPost';
+import CardPostLong from "../../component/Cards/CardPostLong.astro";
+import CardPostSquare from "../../component/Cards/CardPostSquare.astro";
+
+
+
+
+const allPost = await Astro.glob("../blog/*.md");
+const sortedPost = sortPost(
+    allPost, 
+    {noFuturePost: false, publishedOnly: false, limit:undefined}
+  )
+  
+  const allCategory = [...new  Set(sortedPost.map(post => post.frontmatter.category).flat())]
+  const postByCategory = [
+
+  ]
+
+  allCategory.forEach(cat=> {
+
+    postByCategory.push(
+
+    {
+        categoryName: cat,
+        posts: sortedPost.filter(post => post.frontmatter.category === cat)
+
+        }
+    )
+
+  })
+
+  
+---
+
+
+
+
+<ABNMainLayout>
+
+<div class="margin-tb-2vw">
+    {
+        postByCategory.map((cat)=> (
+    
+        <div class="gridContainer3x3">
+            <div class="categoryName">{cat.categoryName.toLocaleUpperCase()}</div>
+    
+                {
+                    cat.posts.map( post=>(
+                       
+                    <CardPostSquare post = {post}/>
+    
+                    )
+    
+                    )
+                }
+    
+    
+    
+    
+    
+           
+        </div>
+    
+        ))
+    }
+
+</div>
+
+
+
+
+
+
+
+   
+</ABNMainLayout>

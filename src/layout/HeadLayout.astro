@@ -7,7 +7,8 @@ const {
 } = Astro.props;
 ---
 
-
+<!DOCTYPE html>
+<html lang="en"></html>
 <head>
 
     <!-- Meta -->
@@ -21,6 +22,10 @@ const {
     <!-- Style Sheet-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="/styles/global.css">
+   
+    <link rel="stylesheet" href="/styles/blog.css">
+    <link rel="stylesheet" href="/styles/link&Buttons.css">
+    <link rel="stylesheet" href="/styles/animations.css">
     <link rel="stylesheet" href="/styles/mobile.css">
 
     <!-- View Port-->
@@ -44,169 +49,4 @@ const {
     <meta name="keywords" content="Penoa, Halua, Halua Content, Samudra Santan">
     <meta name="author" content="Samudra Santan">
 
-   
 </head>
-
-<style is:global>
-
-    .montserrat-basic {
-      font-family: "Montserrat", sans-serif;
-      font-optical-sizing: auto;
-      font-style: normal;
-    }
-
-
-
-
-
-
-  .page-head-text {
-    font-family: "Roboto", sans-serif;
-    font-weight: 900;
-    font-size: 4vw;
-    color: rgb(35, 32, 31);
-   
-  }
-
-  .large-light-text {
-    font-family: "Roboto", sans-serif;
-    font-weight: 200;
-    font-size: 2vw;
-    text-align: justify;
-  }
-
-  .large-bold-text {
-    font-family: "Roboto", sans-serif;
-    font-weight: 600;
-    font-size: 2.7vw;
-    text-align: justify;
-  }
-
-  .small-description-text{
-    font-family: "Roboto", sans-serif;
-    font-weight: 200;
-    font-size: 10px;
-  }
-
-
-
-  .creative-name {
-    font-family: "Roboto", sans-serif;
-        font-size: 3vw;
-        font-weight: 300;
-    }
-    
-
-    .creative-role {
-      font-family: "Roboto", sans-serif;
-        font-size: 1vw;
-        font-weight: 900;
-        margin-top: 15px;
-    }
-
-    .creative-description {
-      font-family: "Roboto", sans-serif;
-        font-size: 1.2vw;
-        font-weight: 300;
-    }
-
-    .creative-add {
-      font-family: "Roboto", sans-serif;
-        font-size: 1.5vw;
-        font-weight: 700;
-    }
-
-
-    .creative-email {
-      font-family: "Roboto", sans-serif;
-        font-size: 1vw;
-        font-weight: 400;
-        padding-top: 100px;
-    }
-
-
-
-  @media only screen and (max-width: 1280px) {
-  /* For tabs: */
-  .menu-text {
-    font-size: 1vw;
-    font-family: "Roboto", sans-serif;
-  }
-
-  .large-light-text {
-    font-family: "Roboto", sans-serif;
-    font-weight: 300;
-    font-size: 2.5vw;
-    text-align: justify;
-  }
-
-  .large-bold-text {
-    font-family: "Roboto", sans-serif;
-    font-weight: 600;
-    font-size: 4vw;
-    text-align: justify;
-  }
-
-
-
-
-}
-
-
-@media only screen and (max-width: 680px) {
-  /* For tabs: */
-  .menu-text {
-    font-size: 4vw;
-    font-family: "Roboto", sans-serif;
-    font-weight: 100;
-  }
-
-  .page-head-text {
-    font-family: "Roboto", sans-serif;
-    font-weight: 900;
-    font-size: 5vw;
-    color: rgb(35, 32, 31);
-   
-  }
-
-
-  .large-light-text {
-    font-family: "Roboto", sans-serif;
-    font-weight: 300;
-    font-size: 3vw;
-    text-align: justify;
-  }
-
-  .large-bold-text {
-    font-family: "Roboto", sans-serif;
-    font-weight: 600;
-    font-size: 5vw;
-    text-align: justify;
-  }
-
-
-
-  
-}
-
-
-
-
-
-
-    .column {
-      display: flex;
-      flex-direction: column;
-    }
-
-    .row {
-
-      display: flex;
-      flex-direction: row;
-
-    }
-
-
-  
-    
-    </style>

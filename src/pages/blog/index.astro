@@ -1,0 +1,25 @@
+---
+
+
+import sortPost from "../../js/sortPost"
+import BlogListComponent from "../../component/Segments/BlogListComponent.astro";
+import MainLayoutBlog from "../../layout/MainLayout_Blog.astro";
+
+const allPost = await Astro.glob("./*.md");
+const sortedPost = sortPost(
+    allPost, 
+    {noFuturePost: false, publishedOnly: false, limit:undefined}
+)
+
+console.log("start")
+console.log(sortedPost[0].Content)
+console.log("end")
+
+
+---
+
+<MainLayoutBlog>
+   <BlogListComponent {sortedPost}/>
+
+</MainLayoutBlog>
+

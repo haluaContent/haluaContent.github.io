@@ -1,0 +1,30 @@
+---
+import ABNMainLayout from "../../layout/MainLayout_Blog.astro"
+import CardPostMain from "../Cards/CardPostMain.astro"
+import CardPostSquare from "../Cards/CardPostSquare.astro"
+
+const {sortedPost} = Astro.props
+
+
+
+---
+
+
+    <div class="gridContainer3x3 bdr-tl margin-tb-2vw">
+        <div class="gridItemMain3x1 bdr-br">
+                    <CardPostMain post = {sortedPost[0]}/>
+                </div>
+                {
+                    sortedPost.slice(1).map(post => (
+
+                    <div class="bdr-br"><CardPostSquare {post}/></div>
+                     
+                     
+                    ))
+                  }
+               
+             
+               
+            </div>
+           
+

@@ -1,28 +1,35 @@
 @media only screen and (max-width: 680px) {
 
-    /* Navigation */
+
+/* Link and Buttons */
 
 
-
-.nav-head {
-    padding-left: 12px;
-    padding-right: 12px;
-    box-sizing: border-box;
+.fa {
+  padding: 4vw;
+  font-size: 4vw;
+  width: 4vw; 
 }
 
+  /* LAYOUT */
 
-
-.menu-icon-container {
+  .narrowFooter {
     display: block;
-}
+  }
+  
+  .wideFooter {
+    display: none;
+  }
 
 
-.menu-container{
+
+  /* Navigation */
+
+.menuNavbar{
   
     position: fixed; top: 0; right: 0;
     overflow: hidden;
-    opacity: 1;
     display: flex;
+    opacity: 1;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -30,11 +37,28 @@
     height: 0;
     transition: 0.5s;
     row-gap: 24px;
+    z-index: 100;
 }
 
-.menu-close-button {
+.drawerIconNavbar {
+  display: block;
+}
+
+.closeButtonMenu {
     display: block;
     font-size: 5vw;
+}
+
+
+.baseNavbar_Blog{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2vw;
+}
+
+.seperatorMenu{
+  display: none;
 }
 
 
@@ -42,7 +66,7 @@
 
 /* Footer */
 
-.footer-main-container {
+.baseFooter {
     box-sizing: border-box;
     display: block;
     width: 100%;
@@ -52,90 +76,36 @@
     row-gap: 4vw;
 }
 
-
-.footer-segment-head {
-  font-weight: 700;
+.footerFooter {
+  justify-content: center;
+  font-size: 3vw;
+ 
 }
 
-.site-container {
+
+
+.contactFooter {
+  padding: 0;
+}
+
+.siteFooter {
     display: flex;
     flex-direction: column;
     row-gap: 1.5vw;
 }
 
-.social-icons {
+
+.titleFooter {
+  font-weight: 700;
+}
+
+.socialIconsFooter {
     margin: 0;
     width: 100%;
     justify-content: center;
 
 }
 
-.contact-container {
-    padding: 0;
-}
-
-
-.footer-footer {
-    justify-content: center;
-    font-size: 2.5vw;
-}
-
-
-.fa {
-    padding: 3vw;
-    font-size: 3vw;
-    width: 3vw;
-    text-align: center;
-    text-decoration: none;
-    margin: 5px 2px;
-    border-radius: 10%;
-    color: rgb(35, 31, 32);
-    border: 1px solid rgb(35, 31, 32);
-  }
-  
-  
-  
-  .fa-youtube:hover {
-    background: #bb0000;
-    color: white;
-    border: none;
-  }
-  
-  .fa-facebook:hover {
-    background: #3B5998;
-    color: white;
-    border: none;
-  }
-  
-  .fa-twitter:hover {
-    background: #55ACEE;
-    color: white;
-    border: none;
-  }
-  
-  .fa-linkedin:hvoer {
-    background: #007bb5;
-    color: white;
-    border: none;
-  }
-  
-  .fa-instagram:hover {
-    background: #125688;
-    color: white;
-    border: none;
-  }
-  
-  .fa-pinterest:hover {
-    background: #cb2027;
-    color: white;
-    border: none;
-  }
-  
-  .fa-soundcloud:hover {
-    background: #ff5500;
-    color: white;
-    border: none;
-  }
 
   /* hALUA iNTRO */
 
@@ -259,6 +229,14 @@
   display: none;
 
 }
+
+
+
+.article-cardMain {
+  max-height: 10vh;
+  column-count: 1;
+}
+
 
 
 

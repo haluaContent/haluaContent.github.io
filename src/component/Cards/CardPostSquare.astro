@@ -1,0 +1,34 @@
+---
+import formatDate from "../../js/formatDate"
+import type Category from "../../pages/category/[category].astro"
+
+const {post} = Astro.props
+const {url, frontmatter} = post
+const { category, articleDate, images, title, description} = frontmatter
+---
+
+
+<a href={url} class="td-n c-dark">
+<div class="container-CardPostSquare">
+    <div class="cardPostSquare-meta">
+        <div class="cat-cardPostSquare"><small>{category}</small></div>
+        <div><small>{formatDate(articleDate)}</small></div>
+    </div>
+    
+
+    <div class="img-CardPostSquare">
+        <img src={images.src}/>
+    </div>
+    <div class="txt-CardPostSquare">
+        <div class="squareCardHeader">
+            {title}
+        </div>
+
+        <div class="postCardBody">
+            {description} 
+        </div>
+    </div>
+
+</div>
+
+</a>

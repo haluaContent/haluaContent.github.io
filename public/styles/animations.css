@@ -1,0 +1,9 @@
+
+
+.anim-tsl-2:hover {
+
+
+    transform: translate(0px, 2px);
+    transition: transform .2s;
+    transition-timing-function: ease-out;
+  }
