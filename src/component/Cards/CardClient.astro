@@ -1,9 +1,11 @@
 ---
+import slugify from '../../js/slugify'
+
 
 
 interface  Props {
     name: string,
-    imageUrl: string
+    imageUrl: string,
 }
 
 const {name, imageUrl} = Astro.props as Props
@@ -11,9 +13,10 @@ const {name, imageUrl} = Astro.props as Props
 ---
 
 
-<div class="client-item-container">
-
-    <img src={imageUrl} height=auto, width=100%, alt={name} />
+<div class="baseCardClient td-n c-dark">
+    <a href=`/clients/${slugify(name.toLocaleLowerCase())}`>
+        <img src={imageUrl} height=auto, width=100%, alt={name} />
+    </a>
 
 </div>
 

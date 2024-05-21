@@ -7,3 +7,31 @@
     transition: transform .2s;
     transition-timing-function: ease-out;
   }
+
+
+
+  @keyframes slideInFromLeft {
+    0% {
+      transform: translateX(-10%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes slideInFromRight {
+    0% {
+      transform: translateX(10%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  .anim-sfl {
+    animation: slideInFromLeft .8s ease-out 0s 1 normal forwards;
+  }
+
+  .anim-sfr {
+    animation: slideInFromRight .8s ease-out 0s 1 normal forwards;
+  }

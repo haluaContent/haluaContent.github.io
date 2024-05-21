@@ -1,4 +1,6 @@
 ---
+import slugify from '../../js/slugify'
+
 
 interface Props {
 
@@ -6,6 +8,7 @@ interface Props {
     type: string,
     client: string,
     src: string,
+    year: number,
 
 }
 
@@ -15,32 +18,34 @@ const {
     type,
     client,
     src,
+    year
     } = Astro.props as Props
 ---
 
 
-<div class="youtube-item-container">
-    <div class="youtube-item-video-container">
+<div class="baseCardYouTube">
+    <div class="videoCardYouTube">
 
         <iframe 
-        class="youtube-item-iframe"
+        class="iframeCardYouTube"
         width=auto height=auto
-        src={src}
+        src={src+"?&rel=0"}
         title={project}
         frameborder="0" 
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-        referrerpolicy="strict-origin-when-cross-origin" 
+        referrerpolicy="strict-origin-when-cross-origin"
+        loading = "lazy" 
         allowfullscreen>
         </iframe>
 
     </div>
    
-    <div class="youtube-item-text-container">
-        <span class="video-name" >{project}</span>
-        <span class ="video-client">{client}</span>
-        <div class="video-footer">
-            <span >Type: {type}</span>
-            <span >2024</span>
+    <div class="textCardYouTube">
+        <span class="nameCardYouTube" >{project}</span>
+        <a href=`/clients/${slugify(client)}` class ="clientCardYouTube td-n c-dark">{client}</a>
+        <div class="footerCardYouTube">
+            <a href=`/showCase/${slugify(type)}` class="td-n c-dark" >Type: {type}</a>
+            <a href=`/showCase/${slugify(year.toString())}` class="td-n c-dark" > {year}</a>
         </div>
        
        

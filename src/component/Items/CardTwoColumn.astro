@@ -1,0 +1,63 @@
+---
+
+interface Props {
+
+    mainText?: string,
+    subText?: string,
+    desText?: string,
+    endText?: string,
+    imgUrl?: string,
+    vdoUrl?: string,
+    reversed?: boolean,
+    half?: boolean,
+
+}
+
+
+const {
+    mainText= "", 
+    subText= "", 
+    desText = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis quibusdam mollitia animi quam quos asperiores dolor praesentium iste molestiae! Non quod, tempora sapiente porro molestiae commodi voluptate sint aperiam recusandae.",
+    endText = "",
+    imgUrl,
+    vdoUrl,
+    reversed = false,
+    half = true
+    } = Astro.props as Props
+---
+
+
+<div class:list={["baseCardTwoCol", {"row-rev": reversed}]}>
+
+    <div class:list = {["textCardTwoCol", {"width50": half, "width40": !half, "ta-e leftPadding anim-sfr": reversed, "rightPadding anim-sfl": !reversed}]}>
+        <div class="subTextCardTwoCol">{subText}</div>
+        <div class="mainTextCardTwoCol">{mainText}</div>
+        <p class="desTextCardTwoCol"> {desText}</p>
+        <div class="endTextCardTwoCol">{endText}</div>
+    </div>
+    {
+        imgUrl && 
+        <div class:list = {["imgCardTwoCol", {"width50": half, "width60": !half, "anim-sfl": reversed, "anim-sfr": !reversed}]}>
+            <img src={imgUrl} width="100%"/>
+        </div>
+    }
+
+    {
+        vdoUrl && 
+        <div class = "vdoCardTwoCol">
+            <iframe width="100%"
+             height="auto"
+                class="iframeCardTwoCol"
+                src={vdoUrl}
+                title={"Some Title"}
+                frameborder="0" 
+                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                referrerpolicy="strict-origin-when-cross-origin" 
+                allowfullscreen
+                >
+        </iframe>
+        </div>
+    }
+ 
+      
+</div>

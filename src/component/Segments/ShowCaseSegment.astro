@@ -4,20 +4,23 @@ import PageHeading from "../Items/PageHeading.astro";
 import CardYoutube from "../Cards/CardYoutube.astro";
 
 
+const {pageHeading, data} = Astro.props
+
+
 ---
-	<div class="showcase-container">
-		<PageHeading text="SHOW CASE"/>
+	<div class="baseShowCase bodyPadding">
+		<PageHeading text={pageHeading}/>
 	
 
 
 	
-		<div class="showcase-content-container">
+		<div class="contentShowCase">
 		
 
 			
 		{
-			showcaseData.map((item)=>(
-				<CardYoutube project ={item.name} type="Video" client= {item.client} src={item.url} />
+			data.map((item)=>(
+				<CardYoutube project ={item.name} type="Video" client= {item.client} src={item.url} year={item.year}/>
 			))
 		}
 

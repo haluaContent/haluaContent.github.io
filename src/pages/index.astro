@@ -2,7 +2,7 @@
 
 
 
-import HaluaIntro from "../component/Items/HaluaIntro.astro";
+import CardTwoCol from "../component/Items/CardTwoColumn.astro";
 import MainLayout from "../layout/MainLayout.astro";
 
 
@@ -13,10 +13,16 @@ import MainLayout from "../layout/MainLayout.astro";
 
 <MainLayout>
 
+    <div class="baseIndex bodyPadding">
+        <CardTwoCol 
+        mainText="PRIYO MUKH",
+        subText="Penoa Presents",
+        imgUrl="/pm.gif",
+        endText="Coming soon.."
+        />
 
-    <HaluaIntro 
-    mainText="PRIYO MUKH",
-    subText="Penoa Presents",
-    imgUrl="/pm.gif",
-    />
+    </div>
+
+
+    
 </MainLayout>

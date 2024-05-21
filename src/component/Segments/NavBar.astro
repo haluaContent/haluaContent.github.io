@@ -6,7 +6,7 @@ import navData from "../../data/navData";
 
 
 <nav>
-    <div class="baseNavbar bgWhite">
+    <div class="baseNavbar bgWhite navBarPadding">
             <div class ="logoNavbar"> 
                 <a href="/">
                     <img src="/siteImages/halua-logo.png" alt="Halua Content Logo"/>
@@ -15,14 +15,14 @@ import navData from "../../data/navData";
 
             <div id="menuNavbar" class="menuNavbar bgWhite">
 
-                <div id="closeButtonMenu" class="closeButtonMenu link-l btn-txt anim-tsl-2">
+                <div id="closeButtonMenu" class="closeButtonMenu link-l btn-txt">
                     &times;
                 </div>
     
         
                 {
                     navData.map((item)=>(
-                        <div  class="link-l btn-text anim-tsl-2">
+                        <div  class="link-l btn-text">
                             <a href={item.path}>{item.name}</a>
                         </div>
                     ))

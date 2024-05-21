@@ -1,21 +1,31 @@
 ---
-import HaluaIntro from "../component/Items/HaluaIntro.astro";
+import CardTwoCol from "../component/Items/CardTwoColumn.astro";
 import PageHeading from "../component/Items/PageHeading.astro";
 import MainLayout from "../layout/MainLayout.astro";
 ---
 
 <MainLayout>
-    <PageHeading text="SERVICES"/>
-    <HaluaIntro 
-    mainText="AUDIO PRODUCTIONS"
-    imgUrl="https://images.unsplash.com/photo-1565656898731-61d5df85f9a7?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-    />
-    <HaluaIntro 
-    mainText="VIDEO PRODUCTIONS"
-    imgUrl="https://images.unsplash.com/photo-1485846234645-a62644f84728?q=80&w=2059&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-    />
-    <HaluaIntro 
-    mainText="CULTURAL EVENTS"
-    imgUrl="https://images.unsplash.com/photo-1507643179773-3e975d7ac515?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-    />
+    <div class="baseServices bodyPadding">
+        <PageHeading text="WE OFFER"/>
+        <CardTwoCol 
+        mainText="AUDIO PRODUCTIONS"
+        imgUrl="https://images.unsplash.com/photo-1565656898731-61d5df85f9a7?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        />
+        <CardTwoCol 
+        mainText="VIDEO PRODUCTIONS"
+        imgUrl="https://images.unsplash.com/photo-1485846234645-a62644f84728?q=80&w=2059&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        reversed = {true}
+        />
+        <CardTwoCol 
+        mainText="CULTURAL EVENTS"
+        imgUrl="https://images.unsplash.com/photo-1507643179773-3e975d7ac515?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        />
+
+        <CardTwoCol 
+        mainText="RATER SATAR"
+        subText="PENOA"
+        vdoUrl="https://www.youtube.com/embed/sXKao0PPwlU?si=QiEOC3mg9Ee4DEu7"
+          />
+    </div>
+   
 </MainLayout>

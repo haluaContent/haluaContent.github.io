@@ -1,0 +1,13 @@
+---
+
+import ShowCaseSegment from "../../component/Segments/ShowCaseSegment.astro";
+import MainLayout from "../../layout/MainLayout.astro";
+import showcaseData from "../../data/ShowCaseData";
+
+
+---
+
+<MainLayout title = "Show Case", description = "A showcase or gallery of our product">
+		<ShowCaseSegment pageHeading="SHOW CASE" data = {showcaseData}/>
+</MainLayout>
+

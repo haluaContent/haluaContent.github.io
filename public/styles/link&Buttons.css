@@ -26,7 +26,6 @@ a:link, a:visited {
 
 .link-l:hover > a:link, .link-l:hover > a:visited, .link-l:hover {
     color:rgb(226, 22, 100);
-    font-weight: 600;
 }
 
 /* linkOnDark */
@@ -43,11 +42,6 @@ a:link, a:visited {
     font-weight: 600;
 
 }
-
-
-/* LinkOnNews */
-
-
 
 
 .link-n > a:link, .link-n > a:visited {
@@ -81,16 +75,16 @@ a:link, a:visited {
     text-align: center;
     text-decoration: none;
     margin: 5px 2px;
-    padding: 1vw;
-    font-size: 1vw;
-    width: 1vw;
+    padding: 1.5vw;
+    font-size: 1.5vw;
+    width: 1.5vw;
+    color: rgb(35, 31, 32);
+    transition: .5s;
    
   }
 
   .fa-l {
 
-    border-radius: 25%;
-    border: 1px solid rgb(35, 31, 32);
     color: rgb(35, 31, 32);
 
 
@@ -99,46 +93,39 @@ a:link, a:visited {
 
   .fa-d{
 
-    border-radius: 25%;
-    border: 1px solid antiquewhite;
     color:antiquewhite;
 
   }
   
   
   .fa-youtube:hover {
-    background: #bb0000;
-    color: white;
+    color: #bb0000;
   }
   
   .fa-facebook:hover {
-    background: #3B5998;
-    color: white;
+    color: #3B5998;
+
   }
   
   .fa-twitter:hover {
-    background: #55ACEE;
-    color: white;
+    color: #55ACEE;
+ 
   }
   
   .fa-linkedin:hover {
-    background: #007bb5;
-    color: white;
+    color: #007bb5;
   }
   
   .fa-instagram:hover {
-    background: #125688;
-    color: white;
+    color: #125688;
   }
   
   .fa-pinterest:hover {
-    background: #cb2027;
-    color: white;
+    color: #cb2027;
   }
   
   .fa-soundcloud {
-    background: #ff5500;
-    color: white;
+    color: #ff5500;
   }
 
 
