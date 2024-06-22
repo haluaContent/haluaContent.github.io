@@ -14,12 +14,7 @@ const navData =  [
     {
         name: "Services",
         path: "/services/"
-    },
-
-    {
-        name: "Blog",
-        path: "/blog/"
-    },
+    }
      
 ]
 
